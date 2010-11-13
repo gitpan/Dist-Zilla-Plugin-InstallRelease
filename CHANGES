@@ -1,0 +1,8 @@
+Revision history for Perl module Dist-Zilla-Plugin-InstallRelease
+
+0.002     2010-11-13
+    * Renamed from LocalInstall to InstallRelease
+
+0.001     2010-10-18
+    * Initial version
+    * Added support for specifying the install command
