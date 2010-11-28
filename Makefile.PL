@@ -21,7 +21,7 @@ my %WriteMakefileArgs = (
   },
   'DISTNAME' => 'Dist-Zilla-Plugin-InstallRelease',
   'EXE_FILES' => [],
-  'LICENSE' => 'gpl',
+  'LICENSE' => 'perl',
   'NAME' => 'Dist::Zilla::Plugin::InstallRelease',
   'PREREQ_PM' => {
     'Carp' => '0',
@@ -30,7 +30,7 @@ my %WriteMakefileArgs = (
     'File::pushd' => '0',
     'Moose' => '0'
   },
-  'VERSION' => '0.002',
+  'VERSION' => '0.003',
   'test' => {
     'TESTS' => 't/*.t'
   }

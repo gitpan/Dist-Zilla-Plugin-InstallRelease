@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::InstallRelease;
 BEGIN {
-  $Dist::Zilla::Plugin::InstallRelease::VERSION = '0.002';
+  $Dist::Zilla::Plugin::InstallRelease::VERSION = '0.003';
 }
 # ABSTRACT: installs your dist after releasing
 
@@ -61,7 +61,7 @@ Dist::Zilla::Plugin::InstallRelease - installs your dist after releasing
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 DESCRIPTION
 
@@ -91,8 +91,8 @@ The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
 site near you, or see L<http://search.cpan.org/dist/Dist-Zilla-Plugin-InstallRelease/>.
 
-The development version lives at L<http://github.com/doherty/Dist-Zilla-Plugin-InstallRelease>
-and may be cloned from L<git://github.com/doherty/Dist-Zilla-Plugin-InstallRelease>.
+The development version lives at L<http://github.com/doherty/Dist-Zilla-Plugin-InstallRelease.git>
+and may be cloned from L<git://github.com/doherty/Dist-Zilla-Plugin-InstallRelease.git>.
 Instead of sending patches, please fork this project using the standard
 git and github infrastructure.
 
@@ -109,11 +109,10 @@ Mike Doherty <doherty@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2100 by Mike Doherty.
+This software is copyright (c) 2100 by Mike Doherty.
 
-This is free software, licensed under:
-
-  The GNU General Public License, Version 3, June 2007
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
 
