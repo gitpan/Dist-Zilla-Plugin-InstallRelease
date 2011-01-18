@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::InstallRelease;
 BEGIN {
-  $Dist::Zilla::Plugin::InstallRelease::VERSION = '0.003';
+  $Dist::Zilla::Plugin::InstallRelease::VERSION = '0.005';
 }
 # ABSTRACT: installs your dist after releasing
 
@@ -22,7 +22,7 @@ has install_command => (
 sub after_release {
     my $self = shift;
 
-    eval {
+    my $success = eval {
         require File::pushd;
         my $built_in = $self->zilla->built_in;
         ## no critic Punctuation
@@ -40,8 +40,11 @@ sub after_release {
         $self->log($@);
         $self->log('Install failed');
     }
+    elsif (!$success) {
+        $self->log("Install failed: $success");
+    }
     else {
-        $self->log('Installed OK');
+        $self->log("Installed OK: $success");
     }
     return;
 }
@@ -61,7 +64,7 @@ Dist::Zilla::Plugin::InstallRelease - installs your dist after releasing
 
 =head1 VERSION
 
-version 0.003
+version 0.005
 
 =head1 DESCRIPTION
 
@@ -91,7 +94,7 @@ The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
 site near you, or see L<http://search.cpan.org/dist/Dist-Zilla-Plugin-InstallRelease/>.
 
-The development version lives at L<http://github.com/doherty/Dist-Zilla-Plugin-InstallRelease.git>
+The development version lives at L<http://github.com/doherty/Dist-Zilla-Plugin-InstallRelease>
 and may be cloned from L<git://github.com/doherty/Dist-Zilla-Plugin-InstallRelease.git>.
 Instead of sending patches, please fork this project using the standard
 git and github infrastructure.
