@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::InstallRelease;
 BEGIN {
-  $Dist::Zilla::Plugin::InstallRelease::VERSION = '0.005';
+  $Dist::Zilla::Plugin::InstallRelease::VERSION = '0.006';
 }
 # ABSTRACT: installs your dist after releasing
 
@@ -22,7 +22,7 @@ has install_command => (
 sub after_release {
     my $self = shift;
 
-    my $success = eval {
+    my $return = eval {
         require File::pushd;
         my $built_in = $self->zilla->built_in;
         ## no critic Punctuation
@@ -37,14 +37,13 @@ sub after_release {
     };
 
     if ($@) {
-        $self->log($@);
-        $self->log('Install failed');
+        $self->log("Install failed: $@");
     }
-    elsif (!$success) {
-        $self->log("Install failed: $success");
+    elsif ($return == 0) {
+        $self->log("Install OK: $return");
     }
     else {
-        $self->log("Installed OK: $success");
+        $self->log("Installed failed: $return");
     }
     return;
 }
@@ -64,7 +63,7 @@ Dist::Zilla::Plugin::InstallRelease - installs your dist after releasing
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 DESCRIPTION
 

@@ -30,7 +30,7 @@ my %WriteMakefileArgs = (
     'File::pushd' => '0',
     'Moose' => '0'
   },
-  'VERSION' => '0.005',
+  'VERSION' => '0.006',
   'test' => {
     'TESTS' => 't/*.t'
   }
