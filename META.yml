@@ -9,7 +9,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400'
+generated_by: 'Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110930'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -21,8 +21,10 @@ requires:
   Dist::Zilla::Role::Plugin: 0
   File::pushd: 0
   Moose: 0
+  autodie: 0
   perl: 5.006
 resources:
-  bugtracker: http://github.com/doherty/Dist-Zilla-Plugin-InstallRelease/issues
+  bugtracker: https://github.com/doherty/Dist-Zilla-Plugin-InstallRelease/issues
+  homepage: http://p3rl.org/Dist::Zilla::Plugin::InstallRelease
   repository: git://github.com/doherty/Dist-Zilla-Plugin-InstallRelease.git
-version: 0.006
+version: 0.007

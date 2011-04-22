@@ -28,9 +28,10 @@ my %WriteMakefileArgs = (
     'Dist::Zilla::Role::AfterRelease' => '0',
     'Dist::Zilla::Role::Plugin' => '0',
     'File::pushd' => '0',
-    'Moose' => '0'
+    'Moose' => '0',
+    'autodie' => '0'
   },
-  'VERSION' => '0.006',
+  'VERSION' => '0.007',
   'test' => {
     'TESTS' => 't/*.t'
   }
