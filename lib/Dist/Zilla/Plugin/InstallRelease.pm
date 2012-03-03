@@ -2,7 +2,7 @@ package Dist::Zilla::Plugin::InstallRelease;
 use strict;
 use warnings;
 # ABSTRACT: installs your dist after releasing
-our $VERSION = '0.007'; # VERSION
+our $VERSION = '0.008'; # VERSION
 
 use Carp ();
 use autodie;
@@ -63,7 +63,7 @@ Dist::Zilla::Plugin::InstallRelease - installs your dist after releasing
 
 =head1 VERSION
 
-version 0.007
+version 0.008
 
 =head1 DESCRIPTION
 
@@ -80,6 +80,8 @@ You can specify an alternate install command:
     [InstallRelease]
     install_command = cpanm .
 
+This plugin must always come before L<Dist::Zilla::Plugin::Clean>.
+
 =for Pod::Coverage after_release
 
 =head1 AVAILABILITY
@@ -88,12 +90,7 @@ The project homepage is L<http://p3rl.org/Dist::Zilla::Plugin::InstallRelease>.
 
 The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
-site near you, or see L<http://search.cpan.org/dist/Dist-Zilla-Plugin-InstallRelease/>.
-
-The development version lives at L<http://github.com/doherty/Dist-Zilla-Plugin-InstallRelease>
-and may be cloned from L<git://github.com/doherty/Dist-Zilla-Plugin-InstallRelease.git>.
-Instead of sending patches, please fork this project using the standard
-git and github infrastructure.
+site near you, or see L<https://metacpan.org/module/Dist::Zilla::Plugin::InstallRelease/>.
 
 =head1 SOURCE
 
@@ -102,10 +99,8 @@ and may be cloned from L<git://github.com/doherty/Dist-Zilla-Plugin-InstallRelea
 
 =head1 BUGS AND LIMITATIONS
 
-No bugs have been reported.
-
-Please report any bugs or feature requests through the web interface at
-L<https://github.com/doherty/Dist-Zilla-Plugin-InstallRelease/issues>.
+You can make new bug reports, and view existing ones, through the
+web interface at L<https://github.com/doherty/Dist-Zilla-Plugin-InstallRelease/issues>.
 
 =head1 AUTHOR
 
